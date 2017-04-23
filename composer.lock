@@ -1,0 +1,126 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "c841ea945c6bca5a03650d94fe16b49f",
+    "packages": [
+        {
+            "name": "bestboysmedialab/language-list",
+            "version": "1.1.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/bestboysmedialab/language-list.git",
+                "reference": "2b69cc19c618a2b3cf0184fa27ed89cb5c24295e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/bestboysmedialab/language-list/zipball/2b69cc19c618a2b3cf0184fa27ed89cb5c24295e",
+                "reference": "2b69cc19c618a2b3cf0184fa27ed89cb5c24295e",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Bestboysmedialab\\LanguageList": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Volker Ansmann",
+                    "email": "volker.ansmann@bestboys-medialab.com",
+                    "homepage": "http://www.bestboys-medialab.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "List of all languages with names and ISO 3166-1 codes in all languages and data formats for Laravel 5",
+            "time": "2017-03-09T18:45:49+00:00"
+        },
+        {
+            "name": "umpirsky/country-list",
+            "version": "2.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/umpirsky/country-list.git",
+                "reference": "9d3e3cee31ba3ca77514f9fbfd6d775b138f66dd"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/umpirsky/country-list/zipball/9d3e3cee31ba3ca77514f9fbfd6d775b138f66dd",
+                "reference": "9d3e3cee31ba3ca77514f9fbfd6d775b138f66dd",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4"
+            },
+            "require-dev": {
+                "symfony/locale": "^2.7|^3.0",
+                "umpirsky/list-generator": "^1.1"
+            },
+            "type": "library",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Saša Stamenković",
+                    "email": "umpirsky@gmail.com"
+                }
+            ],
+            "description": "List of all countries with names and ISO 3166-1 codes in all languages and data formats.",
+            "time": "2016-03-26T08:11:40+00:00"
+        },
+        {
+            "name": "umpirsky/currency-list",
+            "version": "v1.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/umpirsky/currency-list.git",
+                "reference": "021194a0a840bdf5f335132cab5d35f48f0b1c29"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/umpirsky/currency-list/zipball/021194a0a840bdf5f335132cab5d35f48f0b1c29",
+                "reference": "021194a0a840bdf5f335132cab5d35f48f0b1c29",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4"
+            },
+            "require-dev": {
+                "symfony/locale": "^2.7|^3.0",
+                "umpirsky/list-generator": "^1.1"
+            },
+            "type": "library",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Saša Stamenković",
+                    "email": "umpirsky@gmail.com"
+                }
+            ],
+            "description": "List of all currencies with names and ISO 4217 codes in all languages and all data formats.",
+            "time": "2016-01-11T12:08:41+00:00"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": [],
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": []
+}

@@ -1,0 +1,16 @@
+{
+    "name": "pixelairport/locale",
+    "description": "Locale translation arrays for currency, languages and countries.",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Norman Braun",
+            "email": "office@pixelairport.com"
+        }
+    ],
+    "require": {
+        "bestboysmedialab/language-list": "^1.1",
+        "umpirsky/country-list": "^2.0",
+        "umpirsky/currency-list": "^1.0"
+    }
+}
