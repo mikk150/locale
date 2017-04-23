@@ -1,9 +1,15 @@
 # Locale lists
 
 If you need full arrays with currencies, countries or languages in different languages,
-you can simply add this to your project with:
+you can simply add this to your project.
+
+## Install
+
+Open terminal (or other command line tool) and open your project root directory and run:
 
 ```composer requrie pixelairport/locale```
+
+## How to use it
 
 After add it to your project you are able to call following functions to get the arrays by language:
 
