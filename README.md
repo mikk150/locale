@@ -17,10 +17,10 @@ After add it to your project you are able to call following functions to get the
 <?php
 
 // Load pixelairport/locale to your file
-use Pixelairport\Locale\Helpers\Currency;
-use Pixelairport\Locale\Helpers\Country;
-use Pixelairport\Locale\Helpers\Language;
-use Pixelairport\Locale\Helpers\Locale;
+use Pixelairport\Locale\Currency;
+use Pixelairport\Locale\Country;
+use Pixelairport\Locale\Language;
+use Pixelairport\Locale\Locale;
 
 // Sample class
 class Product {
