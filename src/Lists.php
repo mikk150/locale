@@ -1,8 +1,8 @@
 <?php
 
-namespace Pixelairport\Locale\Helpers;
+namespace Pixelairport\Locale;
 
-class Locale
+class Lists
 {
 
     /**

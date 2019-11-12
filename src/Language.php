@@ -1,8 +1,8 @@
 <?php
 
-namespace Pixelairport\Locale\Helpers;
+namespace Pixelairport\Locale;
 
-class Language extends Locale
+class Language extends Lists
 {
 
     /**
@@ -10,7 +10,7 @@ class Language extends Locale
      *
      * @var string
      */
-    public static $sVendorPath = 'bestboysmedialab/language-list/data/';
+    public static $sVendorPath = 'umpirsky/language-list/data/';
 
     /**
      * Name of the data file.

@@ -1,8 +1,8 @@
 <?php
 
-namespace Pixelairport\Locale\Helpers;
+namespace Pixelairport\Locale;
 
-class Currency extends Locale
+class Currency extends Lists
 {
 
     /**

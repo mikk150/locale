@@ -1,6 +1,6 @@
 # Locale lists
 
-If you need full arrays with currencies, countries or languages in different languages,
+If you need full arrays with locales, currencies, countries or languages in different languages,
 you can simply add this to your project.
 
 ## Install
@@ -20,6 +20,7 @@ After add it to your project you are able to call following functions to get the
 use Pixelairport\Locale\Helpers\Currency;
 use Pixelairport\Locale\Helpers\Country;
 use Pixelairport\Locale\Helpers\Language;
+use Pixelairport\Locale\Helpers\Locale;
 
 // Sample class
 class Product {
