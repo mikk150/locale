@@ -17,6 +17,6 @@ class Locale extends Lists
      *
      * @var string
      */
-    public static $sDataFile = 'locale';
+    public static $sDataFile = 'locales';
 
 }

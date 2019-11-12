@@ -13,9 +13,9 @@ class Lists
     private static function getVendorPath()
     {
 
-        $rClass = new \ReflectionClass('Pixelairport\Locale\Helpers\Locale');
+        $rClass = new \ReflectionClass('Pixelairport\Locale\Locale');
 
-        return sprintf('%s/../../../../', dirname($rClass->getFileName()));
+        return sprintf('%s/../../../', dirname($rClass->getFileName()));
 
     }
 
