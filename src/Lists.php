@@ -44,7 +44,7 @@ class Lists
      * @param string $lang Language to load (e.g. 'de','en','it').
      * @param string  Extension type name (e.g. 'json','php','csv').
      *
-     * @return string
+     * @return string|null
      */
     public static function get($element, $lang, $extension = 'php')
     {
