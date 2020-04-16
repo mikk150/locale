@@ -4,7 +4,6 @@ namespace Pixelairport\Locale;
 
 class Lists
 {
-
     /**
      * Get the vendor base path.
      *
@@ -12,11 +11,9 @@ class Lists
      */
     private static function getVendorPath()
     {
-
         $rClass = new \ReflectionClass('Pixelairport\Locale\Locale');
 
         return sprintf('%s/../../../', dirname($rClass->getFileName()));
-
     }
 
     /**
@@ -29,7 +26,6 @@ class Lists
      */
     public static function all($lang, $extension = 'php')
     {
-
         // Get full path to file
         $dataPath = self::getVendorPath().static::$sVendorPath.'/'.$lang.'/'.static::$sDataFile.'.'.$extension;
 
@@ -39,7 +35,25 @@ class Lists
         }
 
         return [];
-
     }
+    
+    /**
+     * Returns a single translated element.
+     *
+     * @param string $element Element for to return.
+     * @param string $lang Language to load (e.g. 'de','en','it').
+     * @param string  Extension type name (e.g. 'json','php','csv').
+     *
+     * @return string
+     */
+    public static function get($element, $lang, $extension = 'php')
+    {
+        $all = self::all($lang, $extension);
 
+        if(is_array($all) && array_key_exists($element, $all)){
+            return $all[$element];
+        }
+
+        return null;
+    }
 }
