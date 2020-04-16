@@ -24,6 +24,10 @@ use Pixelairport\Locale\Locale;
 
 // Sample class
 class Product {
+	public function getSingleLanguage(){
+		return Language::get('en','de'); // Returns the german name for english. In this example "Englisch".
+	}
+
 	public function languages(){
 		return Language::all('de'); // Returns an array with all languages in german
 	}
