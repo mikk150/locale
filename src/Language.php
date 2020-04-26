@@ -4,19 +4,19 @@ namespace Pixelairport\Locale;
 
 class Language extends Lists
 {
+    /**
+     * {@inheritdoc}
+     */
+    protected static function getDataPath()
+    {
+        return 'umpirsky/language-list/data/';
+    }
 
     /**
-     * Path to vendor data directory.
-     *
-     * @var string
+     * {@inheritdoc}
      */
-    public static $sVendorPath = 'umpirsky/language-list/data/';
-
-    /**
-     * Name of the data file.
-     *
-     * @var string
-     */
-    public static $sDataFile = 'language';
-
+    protected static function getDataFile()
+    {
+        return 'language';
+    }
 }

@@ -4,19 +4,19 @@ namespace Pixelairport\Locale;
 
 class Country extends Lists
 {
+    /**
+     * {@inheritdoc}
+     */
+    protected static function getDataPath()
+    {
+        return 'umpirsky/country-list/data/';
+    }
 
     /**
-     * Path to vendor data directory.
-     *
-     * @var string
+     * {@inheritdoc}
      */
-    public static $sVendorPath = 'umpirsky/country-list/data/';
-
-    /**
-     * Name of the data file.
-     *
-     * @var string
-     */
-    public static $sDataFile = 'country';
-
+    protected static function getDataFile()
+    {
+        return 'country';
+    }
 }

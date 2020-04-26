@@ -4,19 +4,19 @@ namespace Pixelairport\Locale;
 
 class Currency extends Lists
 {
+    /**
+     * {@inheritdoc}
+     */
+    protected static function getDataPath()
+    {
+        return 'umpirsky/currency-list/data/';
+    }
 
     /**
-     * Path to vendor data directory.
-     *
-     * @var string
+     * {@inheritdoc}
      */
-    public static $sVendorPath = 'umpirsky/currency-list/data/';
-
-    /**
-     * Name of the data file.
-     *
-     * @var string
-     */
-    public static $sDataFile = 'currency';
-
+    protected static function getDataFile()
+    {
+        return 'currency';
+    }
 }

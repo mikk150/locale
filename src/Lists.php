@@ -2,18 +2,54 @@
 
 namespace Pixelairport\Locale;
 
-class Lists
+abstract class Lists
 {
+    protected const LOCALE_REGEX = '/^(?<language>[a-z]{2,3})(?:[-_](?<script>[a-zA-Z]{4})){0,1}(?:[-_](?<country>[A-Z]{2})){0,1}/';
+
+    /**
+     * @return string
+     */
+    abstract protected static function getDataPath();
+
+    /**
+     * @return string
+     */
+    abstract protected static function getDataFile();
+
     /**
      * Get the vendor base path.
      *
      * @return string
      */
-    private static function getVendorPath()
+    protected static function getVendorPath()
     {
-        $rClass = new \ReflectionClass('Pixelairport\Locale\Locale');
+        $reflection = new \ReflectionClass(\Composer\Autoload\ClassLoader::class);
+        return dirname(dirname($reflection->getFileName())) . DIRECTORY_SEPARATOR;
+    }
 
-        return sprintf('%s/../../../', dirname($rClass->getFileName()));
+    protected static function getLocaleVariants($locale)
+    {
+        $locales = [];
+        if (preg_match(static::LOCALE_REGEX, $locale, $matches)) {
+            if (!static::isEmpty($matches, 'language') && !static::isEmpty($matches, 'script') && !static::isEmpty($matches, 'country')) {
+                $locales[] = $matches['language'] . '_' . ucfirst(strtolower($matches['script'])) . '_' . $matches['country'];
+            }
+            if (!static::isEmpty($matches, 'language') && !static::isEmpty($matches, 'script')) {
+                $locales[] = $matches['language'] . '_' . ucfirst(strtolower($matches['script']));
+            }
+            if (!static::isEmpty($matches, 'language') && !static::isEmpty($matches, 'country')) {
+                $locales[] = $matches['language'] . '_' . $matches['country'];
+            }
+            if (!static::isEmpty($matches, 'language')) {
+                $locales[] = $matches['language'];
+            }
+        }
+        return $locales;
+    }
+
+    private static function isEmpty($matches, $element)
+    {
+        return !array_key_exists($element, $matches) || $matches[$element] === null || $matches[$element] === [] || $matches[$element] === '';
     }
 
     /**
@@ -26,8 +62,10 @@ class Lists
      */
     public static function all($lang, $extension = 'php')
     {
-        // Get full path to file
-        $dataPath = self::getVendorPath().static::$sVendorPath.'/'.$lang.'/'.static::$sDataFile.'.'.$extension;
+        foreach (static::getLocaleVariants($lang) as $localeVariant) {
+            // Get full path to file
+            $dataPath = static::getVendorPath() . static::getDataPath() . '/' . $localeVariant . '/' . static::getDataFile() . '.' . $extension;
+        }
 
         // Return file if exist
         if (is_file($dataPath)) {
@@ -48,7 +86,7 @@ class Lists
      */
     public static function get($element, $lang, $extension = 'php')
     {
-        $all = self::all($lang, $extension);
+        $all = static::all($lang, $extension);
 
         if(is_array($all) && array_key_exists($element, $all)){
             return $all[$element];
